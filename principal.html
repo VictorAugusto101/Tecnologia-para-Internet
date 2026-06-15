@@ -5,51 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-
-        }
-
         header {
-            padding: 10px;
-            font-family: 'Arial', sans-serif;
-            display:flex;
-            justify-content: space-between;
-            align-items: center;    
-        }
+    padding: 10px 30px;
+    font-family: 'Arial', sans-serif;
+    display: flex;                  
+    justify-content: space-between; 
+    align-items: center;            
+    position: relative; /* Importante para posicionar o menu mobile */
+}
 
-         .logo-hamburguer {
-            font-size: 28px; /* Tamanho do emoji */
-            cursor: pointer;
-            text-decoration: none;
-        }
+.logo-hamburguer {
+    font-size: 28px;
+    text-decoration: none;
+}
 
-        nav {
-            display: flex;
-            gap: 20px;
-            justify-content: right;
-            text-align: right;
-        }
+/* Esconde o botão do menu por padrão no computador */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-        nav a {
-            padding-top: 10px;
-            color: black;
-            text-decoration: none;
-        }
+nav {
+    display: flex;
+    gap: 20px;
+}
 
-        nav a:hover {
-            border-top: 2px solid black;
-            transition: 1.0s;
-        }
+nav a {
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s; 
+}
 
-        section {
+nav a:hover {
+    border-top: 2px solid black;
+}
 
-        }
+/* =======================================================
+   REGRAS PARA CELULAR (Telas menores que 768px de largura)
+   ======================================================= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o ícone ☰ apenas no celular */
+    }
+
+    nav {
+        display: none; /* Esconde os links por padrão no celular */
+        flex-direction: column; /* Alinha os links um embaixo do outro */
+        gap: 15px;
+        position: absolute;
+        top: 100%; /* Joga o menu para baixo da barra do header */
+        right: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 10;
+    }
+
+    nav a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    nav a:hover {
+        border-top: none;
+        background-color: #f5f5f5; /* Efeito hover diferente no mobile */
+    }
+
+    /* Classe auxiliar que o JavaScript vai ativar para mostrar o menu */
+    nav.ativo {
+        display: flex;
+    }
+}
+
     </style>
 </head>
 <body>
 
     <header>
         <a href="principal.html" class="logo-hamburguer">🍔</a>
+
+        <button class="menu-toggle" id="menu-btn">☰</button>
+
         <nav>
             <a href="principal.html">Principal</a>
             <a href="hanburguer.html">Cardápio</a>
@@ -59,6 +101,7 @@
     <section>
         
     </section>
-    
+    <script>
+    </script>
 </body>
 </html>
