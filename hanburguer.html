@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hambúrgueria Cardapio</title>
+    <link rel="stylesheet" href="hanburguer.css">
     <style>
        body{
             background-color: #eb9829;
        }
+
+    .logo-hamburguer {
+        font-size: 4vh;
+        text-decoration: none;
+        list-style: none;
+        color: rgb(105, 1, 1);
+        font-family: 'Prata', serif;
+    }
 
        button {
             display: block;
@@ -59,6 +68,15 @@
     </style>    
 </head>
 <body>
+    <header>
+        <a href="principal.html" class="logo-hamburguer">Hambúrgueria</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav>
+            <a href="principal.html">Home</a>
+            <a href="hanburguer.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
     <div class="cardapio">
         <h1>Cardápio</h1>
         <h3>Hambúrgueres</h3>
@@ -70,5 +88,6 @@
         </ul>
     </div>
     <button onclick="window.location.href='principal.html'">Página Principal</button>
+    <script src="hanburguer.js" defer></script>
 </body>
 </html>

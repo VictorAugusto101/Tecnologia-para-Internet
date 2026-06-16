@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato Hamburgueres</title>
+    <style>
+           * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;       
+   }
+        header {
+    padding: 10px 30px;
+    font-family: 'Arial', sans-serif;
+    display: flex;                  
+    justify-content: space-between; 
+    align-items: center;            
+    position: relative; 
+    }
+
+    .logo-hamburguer {
+        font-size: 4vh;
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+        padding-block: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+        transition: 0.3s; 
+    }
+
+    nav a:hover {
+        border-top: 2px solid black;
+    }
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o ícone ☰ apenas no celular */
+    }
+
+    nav {
+        display: none; /* Esconde os links por padrão no celular */
+        flex-direction: column; /* Alinha os links um embaixo do outro */
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        top: 100%; /* Joga o menu para baixo da barra do header */
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        background-blend-mode: blur(10px);
+        width: 280px;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 10;
+        border-radius: 5px;
+    }
+
+    nav a {
+        padding: 10px 10px;
+        display: block;
+        width: 50%;
+        border-radius: 5px; 
+    }
+
+    nav a:hover {
+        border-top: none;
+        background-color: #f5f5f5; /* Efeito hover diferente no mobile */
+    }
+
+    /* Classe auxiliar que o JavaScript vai ativar para mostrar o menu */
+    nav.ativo {
+        display: flex;
+    }
+}
+
+    section {
+        margin: 20px;
+        position: relative;
+        top: 100%;
+        right: 0;
+        color: black;
+        padding-block: 100px;
+        height: 50vh;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section h2 {
+        align-items: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    section table {
+        font-size: 1.2em;
+        border-collapse: collapse;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    section table td {
+        padding: 15px 20px;
+        border: none;
+        border-radius: 0.5dvh;
+        background-color: #f5f5f5;
+    }
+    
+    section table td a {
+        color: #f80000c9;
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="principal.html" class="logo-hamburguer">🍔</a>
+
+        <button class="menu-toggle" id="menu-btn">☰</button>
+
+        <nav>
+            <a href="principal.html">Principal</a>
+            <a href="hanburguer.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <section>
+        <div>
+            <h2>Contato</h2>
+            <table>
+                <tr>
+                    <td>Telefone:</td>
+                    <td><a href="tel:+553412345678">(34) 1234-5678</a></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><a href="mailto:contato@hamburgueria.com">contato@hamburgueria.com</a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="hanburguer.js" defer></script>
+</body>
+</html>
