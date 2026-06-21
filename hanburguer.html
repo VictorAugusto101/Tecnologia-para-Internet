@@ -18,7 +18,7 @@
         font-family: 'Prata', serif;
     }
 
-       button {
+       .botao-principal {
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
@@ -30,9 +30,9 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #000000c9;
-       }
+        .botao-principal:hover {
+            background-color: #222;
+        }
 
         .cardapio {
             max-width: 600px;
@@ -55,15 +55,61 @@
             text-align: center;
             color: #000000c9;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .grid-lanches {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            justify-items: center;
         }
-        li {
-            background-color: #f0f0f0;
+
+        .cartao-lanche {
+            width: 100%;
+            max-width: 280px;
+
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cartao-lanche img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+        }
+
+        .cartao-lanche h2 {
             margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
+        }
+
+        .cartao-lanche p {
+            color: #555;
+        }
+
+        .preco {
+            font-weight: bold;
+            color: green;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-lanches {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-lanches {
+                grid-template-columns: 1fr;
+            }
         }
     </style>    
 </head>
@@ -79,15 +125,14 @@
     </header>
     <div class="cardapio">
         <h1>Cardápio</h1>
-        <h3>Hambúrgueres</h3>
-        <ul >
-            <li>Hambúrguer Clássico - R$ 15,00</li>
-            <li>Hambúrguer com Queijo - R$ 18,00</li>
-            <li>Hambúrguer Bacon - R$ 20,00</li>
-            <li>Hambúrguer Vegano - R$ 22,00</li>
-        </ul>
+        <h3>Hambúrgueres</h3> 
     </div>
-    <button onclick="window.location.href='principal.html'">Página Principal</button>
+
+    <div id="lista-lanches" class="grid-lanches">
+
+    </div>
+
+    <button class="botao-principal" onclick="window.location.href='principal.html'">Página Principal</button>
     <script src="hanburguer.js" defer></script>
     <script src="header.js" defer></script>
 </body>
