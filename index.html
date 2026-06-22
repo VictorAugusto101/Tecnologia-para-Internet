@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Madeireiro</title>
     <link rel="stylesheet" href="header.css">
-    <style>
-
-    section {
-    background-image: url("images/fundoMe.jpg"); 
-    background-size: cover;
-    background-position: center;    
-    background-repeat: no-repeat;   
-    background-attachment: fixed;   
-    min-height: 100vh; 
-   }
-   
-
-    .logo-hamburguer {
-        font-size: 4vh;
-        text-decoration: none;
-    }
-
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <header>
-        <a href="principal.html" class="logo-hamburguer">🍔</a>
+    <header style="background-color: white;">
+        <a href="index.html" class="logo-hamburguer">🍔</a>
 
         <button class="menu-toggle" id="menu-btn">☰</button>
 
         <nav>
-            <a href="principal.html">Principal</a>
+            <a href="index.html">Principal</a>
             <a href="hanburguer.html">Cardápio</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
     <section>
-        <h1>Seja bem vindo</h1>
+        <div class="centro">
+            <h1>MADEIREIRO</h1>
+            <h2>Seja bem-vindo</h2>
+            <p>O verdadeiro sabor do hambúrguer artesanal, grelhado na perfeição.</p>
+        </div>
     </section>
+
+    <main>
+        <div class="left">
+            <h3>O plano perfeito para hoje à noite envolve o nosso hambúrguer.</h3>
+        </div>
+        <div class="right"></div>
+    </main>
+
+    <footer>
+        <div class="div">
+            <p>O verdadeiro sabor do hambúrguer artesanal, grelhado na perfeição.</p>
+        </div>
+        <div class="div">
+            <p>Veja mais do nosso produto no menu</p><br>
+            <p>Conheça mais do nosso <a href="hanburguer.html">cardápio</a></p>
+        </div>
+        <div class="div">
+            <p>Conheça outras páginas relacionadas a nossa loja</p><br>
+            <p><a href="index.html">Página Principal</a></p>
+            <p><a href="hanburguer.html">Menu</a></p>
+            <p><a href="contato.html">Contato</a></p>
+        </div>
+    </footer>
+
     <script src="header.js" defer></script>
 </body>
 </html>
