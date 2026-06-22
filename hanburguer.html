@@ -55,7 +55,7 @@
             text-align: center;
             color: #000000c9;
         }
-        .grid-lanches {
+       .grid-lanches {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
@@ -63,14 +63,9 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-
-            justify-items: center;
         }
 
         .cartao-lanche {
-            width: 100%;
-            max-width: 280px;
-
             background-color: white;
             padding: 15px;
             border-radius: 10px;
@@ -81,17 +76,10 @@
         .cartao-lanche img {
             width: 100%;
             height: 160px;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
             border-radius: 8px;
-        }
-
-        .cartao-lanche h2 {
-            margin: 10px 0;
-        }
-
-        .cartao-lanche p {
-            color: #555;
+            background-color: white;
         }
 
         .preco {
